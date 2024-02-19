@@ -5,6 +5,7 @@
 #include <QDateTime>
 
 #include "SerialPortAvailAble.h"
+#include "SerialPortInit.h"
 #include "GlobalSetting.h"
 
 namespace Ui {
@@ -21,12 +22,31 @@ public:
 
     void init();
 
+    void setControlsEnabled(bool enabled);
+
+    void connectCheckBox();
+
+    void onFrameStateChanged(int state);
+
+    void onOrderStateChanged(int state);
+
+    void onCRCStateChanged(int state);
+
+    void onEndStateChanged(int state);
+
+
+
+private slots:
+
+    void on_cominitButton_clicked();
 
 private:
 
     Ui::SerialPortDlg *ui;
 
     SerialPortAvailAble S_AvailAble;
+
+    SerialPortInit S_Init;
 
 
 };

@@ -17,3 +17,4 @@ void SerialPortAvailAble::AvailSerialPorts(QComboBox *comboBox)
         comboBox->addItem(portInfo.portName());
     }
 }
+
