@@ -1,7 +1,10 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QThreadPool>
+
+#include "Thread/TestThread.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +19,8 @@ public:
     ~MainWindow();
 
 private:
+
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
