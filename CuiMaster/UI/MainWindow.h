@@ -5,6 +5,8 @@
 #include <QThreadPool>
 
 #include "Thread/TestThread.h"
+#include "SerialPort/SerialPortDlg.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,9 +20,20 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void init();
+
+    void connectSignalsAndSlots();
+
+    void connectMenuActions();
+
+    void showSerialPort();
+
+
 private:
 
     Ui::MainWindow *ui;
 
+    SerialPortDlg SerialDlg;
+
 };
-#endif // MAINWINDOW_H
+#endif
